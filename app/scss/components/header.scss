@@ -1,0 +1,20 @@
+.header {
+  height: 3.5rem;
+  width: 100%;
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+
+  &__logo {
+    color: $lavender;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    &--light {
+      font-weight: 300;
+    }
+  }
+}

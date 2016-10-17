@@ -1,0 +1,38 @@
+.section-tab {
+
+  &__header {
+    border-bottom: 2px solid $aqua;
+  }
+
+  &__heading {
+    padding: 2rem 8% 0;
+    font-weight: 300;
+    color: $midgray;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0 8%;
+
+    .section-tab__tab {
+      margin-right: 2rem;
+      padding-bottom: 1rem;
+      color: $haze;
+      border-bottom: 3px solid transparent;
+      transition: .3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $midgray;
+      }
+
+      &--selected {
+        color: $midgray;
+        border-bottom: 3px solid $blue;
+      }
+    }
+  }
+}

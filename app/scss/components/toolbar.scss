@@ -1,0 +1,100 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8%;
+
+  &__left-content,
+  &__right-content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__amount {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $midgray;
+    margin-right: 2rem;
+    letter-spacing: .2px;
+  }
+
+  &__dropdown {
+    background-color: white;
+    padding: .5rem .75rem;
+    width: 13rem;
+    margin-right: 2.5rem;
+    font-size: .875rem;
+    color: $lightgray;
+    letter-spacing: .2px;
+    position: relative;
+
+    svg {
+      width: .5rem;
+      height: .5rem;
+      position: absolute;
+      right: .75rem;
+      top: .9rem;
+      transform: rotate(180deg);
+
+      path {
+        fill: $lightgray;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    input {
+      border: none;
+      background: transparent;
+      font-size: .875rem;
+      font-family: 'Roboto';
+      color: $lightgray;
+    }
+
+    svg {
+      width: 1.2rem;
+      margin-right: .75rem;
+
+      stroke {
+        fill: $midgray;
+      }
+    }
+  }
+
+  &__filter {
+    background-color: white;
+    padding: .5rem .75rem;
+    width: 10rem;
+    font-size: .875rem;
+    color: $lightgray;
+    letter-spacing: .2px;
+    position: relative;
+
+    &--selected {
+      color: $blue;
+    }
+
+    svg {
+      width: .5rem;
+      height: .5rem;
+      position: absolute;
+      right: .75rem;
+      top: .9rem;
+      transform: rotate(180deg);
+
+      path {
+        fill: $lightgray;
+      }
+    }
+  }
+
+  &__toggle-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: white;
+    margin-left: .5rem;
+  }
+}

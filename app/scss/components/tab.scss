@@ -1,0 +1,26 @@
+.nav {
+
+  &__list {
+    list-style: none;
+    display: flex;
+
+    &-item {
+      color: rgba($lavender, .8);
+      font-size: .875rem;
+      margin: 0 1rem;
+      padding: 1.2rem 0 .9rem;
+      border-bottom: 4px solid transparent;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        color: white;
+      }
+
+      &--selected {
+        color: white;
+        border-bottom: 4px solid white;
+      }
+    }
+  }
+}
