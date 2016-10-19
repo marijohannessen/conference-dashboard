@@ -22,5 +22,9 @@
         border-bottom: 4px solid white;
       }
     }
+
+    @media screen and (max-width: 745px) {
+      display: none;
+    }
   }
 }

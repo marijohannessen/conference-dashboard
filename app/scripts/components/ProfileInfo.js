@@ -1,10 +1,23 @@
 const React = require('react');
 
 class ProfileInfo extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  openDropdown = () => {
+    const dropdown = document.querySelector('.profile-info__dropdown');
+    const username = document.querySelector('.profile-info__username');
+    dropdown.classList.toggle('open');
+    username.classList.toggle('open');
+  }
+
   render() {
+
     return (
       <div className="profile-info">
-        <div className="profile-info__dropdown--trigger">
+        <div className="profile-info__dropdown--trigger" onClick={this.openDropdown}>
           <p className="profile-info__username">John Appleseed</p>
           <div className="profile-info__avatar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58">

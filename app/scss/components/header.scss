@@ -12,9 +12,19 @@
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s ease;
 
     &--light {
       font-weight: 300;
     }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    padding: 0 5%;
   }
 }

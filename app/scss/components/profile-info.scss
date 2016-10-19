@@ -17,6 +17,11 @@
   &__username {
     font-size: .875rem;
     color: rgba($lavender, .7);
+    transition: .3s ease;
+
+    &.open {
+      color: white;
+    }
   }
 
   &__avatar {
@@ -32,6 +37,46 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    display: none;
+    position: absolute;
+    width: 10rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-1.125rem, 1rem);
+    transition: .3s ease;
+    transform-origin: top right;
+    z-index: -1;
+
+    &-item {
+      background-color: white;
+      padding: .75rem 1rem;
+      font-size: .875rem;
+      color: $lightgray;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $purple;
+        color: white;
+      }
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -16px;
+        right: 1px;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid white;
+      }
+    }
+
+    &.open {
+      opacity: 1;
+      transform: translate(-1.125rem, 1.25rem);
+      z-index: 1;
+    }
   }
 }

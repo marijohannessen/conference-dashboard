@@ -57,6 +57,7 @@
     "@kadira/storybook": "^1.38.0",
     "autoprefixer": "^6.3.7",
     "babel-eslint": "6.0.4",
+    "babel-preset-stage-0": "^6.16.0",
     "babel-preset-stage-1": "^6.5.0",
     "cpy": "^4.0.1",
     "css-loader": "^0.23.1",

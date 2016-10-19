@@ -8,6 +8,7 @@ require('./scss/main.scss');
 import Header from './scripts/components/Header';
 import SectionTabs from './scripts/components/SectionTabs';
 import Toolbar from './scripts/components/Toolbar';
+import Recordings from './scripts/components/Recordings';
 
 // <App />
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Header />
         <SectionTabs />
         <Toolbar />
+        <Recordings />
       </div>
     )
   }

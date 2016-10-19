@@ -8,6 +8,10 @@
     padding: 2rem 8% 0;
     font-weight: 300;
     color: $midgray;
+
+    @media screen and (max-width: 1085px) {
+      padding: 2rem 5% 0;
+    }
   }
 
   &__tabs {
@@ -17,6 +21,14 @@
     margin-top: 1rem;
     padding: 0 8%;
 
+    @media screen and (max-width: 1085px) {
+      padding: 0 5%;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin-top: 1.5rem;
+    }
+
     .section-tab__tab {
       margin-right: 2rem;
       padding-bottom: 1rem;
@@ -24,6 +36,10 @@
       border-bottom: 3px solid transparent;
       transition: .3s ease-in-out;
       cursor: pointer;
+
+      @media screen and (max-width: 430px) {
+        font-size: .9rem;
+      }
 
       &:hover {
         color: $midgray;

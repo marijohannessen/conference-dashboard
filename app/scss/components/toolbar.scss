@@ -4,6 +4,14 @@
   justify-content: space-between;
   padding: 2rem 8%;
 
+  @media screen and (max-width: 1085px) {
+    padding: 2rem 5%;
+  }
+
+  @media screen and (max-width: 985px) {
+    display: none;
+  }
+
   &__left-content,
   &__right-content {
     display: flex;
@@ -19,6 +27,54 @@
   }
 
   &__dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 13rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-.75rem, .5rem);
+    transition: .2s ease;
+    transform-origin: top right;
+    z-index: -1;
+
+    &-item {
+      background-color: white;
+      padding: .75rem 1rem;
+      font-size: .875rem;
+      color: $lightgray;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $purple;
+        color: white;
+      }
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -16px;
+        right: 1px;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid white;
+        z-index: 3;
+      }
+    }
+
+    &.open {
+      opacity: 1;
+      transform: translate(-.75rem, 1.7rem);
+      z-index: 5;
+    }
+  }
+
+  &__dropdown-main {
     background-color: white;
     padding: .5rem .75rem;
     width: 13rem;
@@ -27,6 +83,7 @@
     color: $lightgray;
     letter-spacing: .2px;
     position: relative;
+    cursor: pointer;
 
     svg {
       width: .5rem;
@@ -48,10 +105,17 @@
 
     input {
       border: none;
+      width: 20rem;
       background: transparent;
       font-size: .875rem;
+      padding: .5rem;
       font-family: 'Roboto';
       color: $lightgray;
+
+      &:focus {
+        outline: none;
+        background-color: white;
+      }
     }
 
     svg {
@@ -72,6 +136,7 @@
     color: $lightgray;
     letter-spacing: .2px;
     position: relative;
+    cursor: pointer;
 
     &--selected {
       color: $blue;
@@ -88,6 +153,54 @@
       path {
         fill: $lightgray;
       }
+    }
+  }
+
+  &__filter-dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 10rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-.75rem, 1.2rem);
+    transition: .3s ease;
+    transform-origin: top right;
+    z-index: -1;
+
+    &-item {
+      background-color: white;
+      padding: .75rem 1rem;
+      font-size: .875rem;
+      color: $lightgray;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $purple;
+        color: white;
+      }
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -16px;
+        right: 1px;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid white;
+        transition: .3s;
+      }
+    }
+
+    &.open {
+      opacity: 1;
+      z-index: 1;
+      transform: translate(-.75rem, 1.4rem);
     }
   }
 
